@@ -1,0 +1,10 @@
+class Solution:
+    def singleNumber(self, nums: List[int]) -> int:
+        #XOR -> O(n) -> O(1) space
+
+        x = nums[0]
+
+        for i in range(1,len(nums)):
+            x = x^nums[i]
+        
+        return x
